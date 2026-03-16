@@ -265,6 +265,150 @@ body::before {
   background-size: 40px 40px;
 }
 
+
+#hero {
+  background: linear-gradient(160deg, #E2E6ED 0%, #E8ECF2 40%, #E4E8F0 100%) !important;
+  position: relative;
+}
+#hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 80% 20%, rgba(21,101,192,0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(0,121,107,0.08) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 50% at 90% 90%, rgba(184,146,42,0.08) 0%, transparent 50%);
+  pointer-events: none;
+  animation: auroraShift 12s ease-in-out infinite alternate;
+}
+@keyframes auroraShift {
+  0%   { background-position: 0% 0%, 100% 100%, 50% 50%; opacity: 1; }
+  50%  { background-position: 20% 30%, 80% 70%, 60% 40%; opacity: 0.7; }
+  100% { background-position: 40% 60%, 60% 40%, 80% 20%; opacity: 1; }
+}
+
+#about {
+  position: relative;
+  background: linear-gradient(135deg, #EEF2F7 0%, #F0EBE3 100%) !important;
+}
+#about::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 100% 0%, rgba(184,146,42,0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 60% at 0% 100%, rgba(21,101,192,0.07) 0%, transparent 55%);
+}
+#about .section-inner { position: relative; z-index: 1; }
+
+#usecases {
+  position: relative;
+  background: linear-gradient(160deg, #E4E9F2 0%, #EAF0F8 50%, #E6EDF5 100%) !important;
+}
+#usecases::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 60% 70% at 0% 50%, rgba(0,105,92,0.09) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 50% at 100% 20%, rgba(21,101,192,0.09) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 40% at 50% 100%, rgba(184,146,42,0.07) 0%, transparent 50%);
+}
+#usecases .section-inner { position: relative; z-index: 1; }
+
+#experience {
+  position: relative;
+  background: linear-gradient(145deg, #EDF1F7 0%, #EDE9E3 100%) !important;
+}
+#experience::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 100% 100%, rgba(184,146,42,0.09) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 0% 0%, rgba(21,101,192,0.07) 0%, transparent 55%);
+}
+#experience .section-inner { position: relative; z-index: 1; }
+
+#articles {
+  position: relative;
+  background: linear-gradient(155deg, #E6EBF5 0%, #EDF2F8 50%, #E8EDF4 100%) !important;
+}
+#articles::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 65% 55% at 20% 0%, rgba(21,101,192,0.10) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 45% at 90% 80%, rgba(0,105,92,0.08) 0%, transparent 50%);
+}
+#articles .section-inner { position: relative; z-index: 1; }
+
+#skills {
+  position: relative;
+  background: linear-gradient(135deg, #EBF0F8 0%, #F0EAE0 100%) !important;
+}
+#skills::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 55% 60% at 100% 50%, rgba(184,146,42,0.10) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 50% at 0% 30%, rgba(21,101,192,0.08) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 40% at 50% 100%, rgba(0,105,92,0.07) 0%, transparent 50%);
+}
+#skills .section-inner { position: relative; z-index: 1; }
+
+#hosting {
+  position: relative;
+  background: linear-gradient(150deg, #E4E9F2 0%, #EBE6F0 100%) !important;
+}
+#hosting::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 0% 100%, rgba(21,101,192,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 100% 0%, rgba(184,146,42,0.08) 0%, transparent 55%);
+}
+#hosting .hosting-inner { position: relative; z-index: 1; }
+
+#github-guide {
+  position: relative;
+  background: linear-gradient(160deg, #EEF2F9 0%, #EAF0E8 100%) !important;
+}
+
+/* Subtle diagonal hatching on use-cases + articles cards */
+.uc-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 18px,
+    rgba(21,101,192,0.015) 18px,
+    rgba(21,101,192,0.015) 19px
+  );
+  border-radius: inherit;
+  z-index: 0;
+}
+.uc-card > * { position: relative; z-index: 1; }
+
 /* ── ANIMATIONS ── */
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeRight{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
@@ -303,7 +447,7 @@ body::before {
     <li><a href="#contact">Contact</a></li>
     <li><a href="#github-guide">Host</a></li>
   </ul>
-  <a href="/cdn-cgi/l/email-protection#68181a091b0009061c021c5f5f281109000707460b0705" class="nav-contact">Connect</a>
+  <a href="#contact" class="nav-contact">Connect</a>
 </nav>
 
 <!-- HERO -->
@@ -330,6 +474,17 @@ body::before {
   </div>
 </section>
 
+<div aria-hidden="true" style="line-height:0;display:block;margin-bottom:-2px;overflow:hidden;">
+  <svg viewBox="0 0 1440 56" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:56px;display:block;">
+    <defs>
+      <linearGradient id="wg1" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0%" stop-color="#E2E6ED"/>
+        <stop offset="100%" stop-color="#EEF2F7"/>
+      </linearGradient>
+    </defs>
+    <path d="M0,28 C320,56 640,0 960,28 C1120,42 1300,14 1440,28 L1440,56 L0,56 Z" fill="url(#wg1)"/>
+  </svg>
+</div>
 <!-- ABOUT -->
 <section id="about">
   <div class="section-inner">
@@ -352,6 +507,17 @@ body::before {
   </div>
 </section>
 
+<div aria-hidden="true" style="line-height:0;display:block;margin-bottom:-2px;overflow:hidden;">
+  <svg viewBox="0 0 1440 56" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:56px;display:block;">
+    <defs>
+      <linearGradient id="wg2" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0%" stop-color="#F0EBE3"/>
+        <stop offset="100%" stop-color="#E4E9F2"/>
+      </linearGradient>
+    </defs>
+    <path d="M0,28 C320,56 640,0 960,28 C1120,42 1300,14 1440,28 L1440,56 L0,56 Z" fill="url(#wg2)"/>
+  </svg>
+</div>
 <!-- USE CASES -->
 <section id="usecases">
   <div class="section-inner">
@@ -368,6 +534,17 @@ body::before {
   </div>
 </section>
 
+<div aria-hidden="true" style="line-height:0;display:block;margin-bottom:-2px;overflow:hidden;">
+  <svg viewBox="0 0 1440 56" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:56px;display:block;">
+    <defs>
+      <linearGradient id="wg3" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0%" stop-color="#E4E9F2"/>
+        <stop offset="100%" stop-color="#EDF1F7"/>
+      </linearGradient>
+    </defs>
+    <path d="M0,28 C320,56 640,0 960,28 C1120,42 1300,14 1440,28 L1440,56 L0,56 Z" fill="url(#wg3)"/>
+  </svg>
+</div>
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-inner">
@@ -386,6 +563,17 @@ body::before {
   </div>
 </section>
 
+<div aria-hidden="true" style="line-height:0;display:block;margin-bottom:-2px;overflow:hidden;">
+  <svg viewBox="0 0 1440 56" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:56px;display:block;">
+    <defs>
+      <linearGradient id="wg4" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0%" stop-color="#EDE9E3"/>
+        <stop offset="100%" stop-color="#E6EBF5"/>
+      </linearGradient>
+    </defs>
+    <path d="M0,28 C320,56 640,0 960,28 C1120,42 1300,14 1440,28 L1440,56 L0,56 Z" fill="url(#wg4)"/>
+  </svg>
+</div>
 <!-- ARTICLES -->
 <section id="articles">
   <div class="section-inner">
@@ -403,6 +591,17 @@ body::before {
   </div>
 </section>
 
+<div aria-hidden="true" style="line-height:0;display:block;margin-bottom:-2px;overflow:hidden;">
+  <svg viewBox="0 0 1440 56" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:56px;display:block;">
+    <defs>
+      <linearGradient id="wg5" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0%" stop-color="#E8EDF4"/>
+        <stop offset="100%" stop-color="#EBF0F8"/>
+      </linearGradient>
+    </defs>
+    <path d="M0,28 C320,56 640,0 960,28 C1120,42 1300,14 1440,28 L1440,56 L0,56 Z" fill="url(#wg5)"/>
+  </svg>
+</div>
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-inner">
